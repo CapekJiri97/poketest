@@ -175,28 +175,28 @@ function getSoulmate(x,y) {
     ] 
 
     console.log(x,y);
-    if (x <= -0.5 && y >= 0.5) {
-       //charmander
-        img = soulmates.find(soulmate => soulmate.id === 5).img;
-        text = soulmates.find(soulmate => soulmate.id === 5).text;
-    } else if (x <= -0.5 && y <= -0.5) {
-        //bulbasaur
-        img = soulmates.find(soulmate => soulmate.id === 1).img;
-        text = soulmates.find(soulmate => soulmate.id === 1).text;
-    } else if (x >= 0.5 && y <= -0.5) {
-        //squirtle
-        img = soulmates.find(soulmate => soulmate.id === 4).img;
-        text = soulmates.find(soulmate => soulmate.id === 4).text;
-    } else if (x >= 0.5 && y >= 0.5) {
-        //pikachu
-        img = soulmates.find(soulmate => soulmate.id === 2).img;
-        text = soulmates.find(soulmate => soulmate.id === 2).text;
-    } else if (x <= 0.5 && y <= 0.5 && x>= -0.5 && y>= -0.5) {
+    if (x <= 0.5 && y <= 0.5 && x>= -0.5 && y>= -0.5) {
         //baller - asi geodude
         img = soulmates.find(soulmate => soulmate.id === 3).img;
         text = soulmates.find(soulmate => soulmate.id === 3).text;
     }
-
+    else if (x <= 0 && y >= 0) {
+       //charmander
+        img = soulmates.find(soulmate => soulmate.id === 5).img;
+        text = soulmates.find(soulmate => soulmate.id === 5).text;
+    } else if (x <= 0 && y <= 0) {
+        //bulbasaur
+        img = soulmates.find(soulmate => soulmate.id === 1).img;
+        text = soulmates.find(soulmate => soulmate.id === 1).text;
+    } else if (x >= 0 && y <= 0) {
+        //squirtle
+        img = soulmates.find(soulmate => soulmate.id === 4).img;
+        text = soulmates.find(soulmate => soulmate.id === 4).text;
+    } else if (x >= 0 && y >= 0) {
+        //pikachu
+        img = soulmates.find(soulmate => soulmate.id === 2).img;
+        text = soulmates.find(soulmate => soulmate.id === 2).text;
+    } 
     console.log(img,text);
     return [img, text]; 
 }
